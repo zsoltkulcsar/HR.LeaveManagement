@@ -3,8 +3,39 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{029BDD02-12A6-450C-8799-0FDD59D6DCCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{95E60665-859B-4A5C-BEFB-8A6C4E0C3A1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E568EAA2-666A-4F2B-83EA-5785EC5CDFB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4B6216F8-CC8D-4142-B77D-172DA78D956F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E4985F29-8799-48A5-987C-7CBD6DB6F35F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{38FFFA7D-752F-4385-B40B-FF89385B8957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Domain", "HR.LeaveManagement.Domain\HR.LeaveManagement.Domain.csproj", "{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E568EAA2-666A-4F2B-83EA-5785EC5CDFB1} = {029BDD02-12A6-450C-8799-0FDD59D6DCCD}
+		{4B6216F8-CC8D-4142-B77D-172DA78D956F} = {029BDD02-12A6-450C-8799-0FDD59D6DCCD}
+		{E4985F29-8799-48A5-987C-7CBD6DB6F35F} = {029BDD02-12A6-450C-8799-0FDD59D6DCCD}
+		{38FFFA7D-752F-4385-B40B-FF89385B8957} = {029BDD02-12A6-450C-8799-0FDD59D6DCCD}
+		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C} = {4B6216F8-CC8D-4142-B77D-172DA78D956F}
 	EndGlobalSection
 EndGlobal
