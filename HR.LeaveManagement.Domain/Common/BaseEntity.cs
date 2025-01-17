@@ -1,8 +1,8 @@
 ﻿namespace HR.LeaveManagement.Domain.Common
 {
-    public abstract class BaseEntity<T> where T : struct
+    public abstract class BaseEntity
     {
-        public T Id { get; set; }
+        public int Id { get; set; }
 
         public DateTime? DateCreated { get; set; }
 
