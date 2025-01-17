@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{029BDD02-12A6-450C-8799-0FDD59D6DCCD}"
 EndProject
@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Persistence", "HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj", "{6CF89A17-0E07-4D4B-9F50-453F98803097}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Infrastructure", "HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj", "{E73BC2C4-C478-4A86-9BEA-DC250D650637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6CF89A17-0E07-4D4B-9F50-453F98803097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF89A17-0E07-4D4B-9F50-453F98803097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF89A17-0E07-4D4B-9F50-453F98803097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73BC2C4-C478-4A86-9BEA-DC250D650637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73BC2C4-C478-4A86-9BEA-DC250D650637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73BC2C4-C478-4A86-9BEA-DC250D650637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73BC2C4-C478-4A86-9BEA-DC250D650637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,5 +57,6 @@ Global
 		{BADCBC1C-0B42-411C-8B3B-4012EDE4CD5C} = {4B6216F8-CC8D-4142-B77D-172DA78D956F}
 		{9C7622B6-08DD-4F2E-A58B-D753871C9614} = {4B6216F8-CC8D-4142-B77D-172DA78D956F}
 		{6CF89A17-0E07-4D4B-9F50-453F98803097} = {E4985F29-8799-48A5-987C-7CBD6DB6F35F}
+		{E73BC2C4-C478-4A86-9BEA-DC250D650637} = {E4985F29-8799-48A5-987C-7CBD6DB6F35F}
 	EndGlobalSection
 EndGlobal
