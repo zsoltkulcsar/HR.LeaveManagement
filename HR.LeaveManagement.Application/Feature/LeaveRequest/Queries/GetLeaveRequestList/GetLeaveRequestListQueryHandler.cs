@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using MediatR;
 
@@ -8,23 +9,23 @@ namespace HR.LeaveManagement.Application.Feature.LeaveRequest.Queries.GetLeaveRe
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
-        //private readonly IUserService _userService;
+        private readonly IUserService _userService;
 
         public GetLeaveRequestListQueryHandler(ILeaveRequestRepository leaveRequestRepository,
-            IMapper mapper /*IUserService userService*/)
+            IMapper mapper, IUserService userService)
         {
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
-            //this._userService = userService;
+            this._userService = userService;
         }
 
-        public Task<List<LeaveRequestListDto>> Handle(GetLeaveRequestListQuery request, CancellationToken cancellationToken)
+        public async Task<List<LeaveRequestListDto>> Handle(GetLeaveRequestListQuery request, CancellationToken cancellationToken)
         {
 
             var leaveRequests = new List<Domain.LeaveRequest>();
             var requests = new List<LeaveRequestListDto>();
             
-            /*
+            
             if (request.IsLoggedInUser)
             {
                 var userId = _userService.UserId;
@@ -46,7 +47,7 @@ namespace HR.LeaveManagement.Application.Feature.LeaveRequest.Queries.GetLeaveRe
                     req.Employee = await _userService.GetEmployee(req.RequestingEmployeeId);
                 }
             }
-            */
+            
 
             return requests;
         }

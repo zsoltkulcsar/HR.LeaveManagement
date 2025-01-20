@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Email;
+using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Models.Email;
@@ -14,17 +15,17 @@ namespace HR.LeaveManagement.Application.Feature.LeaveRequest.Commands.CreateLea
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly ILeaveAllocationRepository _leaveAllocationRepository;
-        //private readonly IUserService _userService;
+        private readonly IUserService _userService;
 
         public CreateLeaveRequestCommandHandler(IEmailSender emailSender,
-            IMapper mapper, ILeaveTypeRepository leaveTypeRepository, ILeaveRequestRepository leaveRequestRepository, ILeaveAllocationRepository leaveAllocationRepository /*IUserService userService*/)
+            IMapper mapper, ILeaveTypeRepository leaveTypeRepository, ILeaveRequestRepository leaveRequestRepository, ILeaveAllocationRepository leaveAllocationRepository, IUserService userService)
         {
             _emailSender = emailSender;
             _mapper = mapper;
             this._leaveTypeRepository = leaveTypeRepository;
             this._leaveRequestRepository = leaveRequestRepository;
             this._leaveAllocationRepository = leaveAllocationRepository;
-            //this._userService = userService;
+            this._userService = userService;
         }
 
         public async Task<Unit> Handle(CreateLeaveRequestCommand request, CancellationToken cancellationToken)
@@ -35,7 +36,7 @@ namespace HR.LeaveManagement.Application.Feature.LeaveRequest.Commands.CreateLea
             if (validationResult.Errors.Any())
                 throw new BadRequestException("Invalid Leave Request", validationResult);
 
-            var employeeId = "_userService.UserId";
+            var employeeId = _userService.UserId;
 
             var allocation = await _leaveAllocationRepository.GetUserAllocations(employeeId, request.LeaveTypeId);
 
@@ -63,7 +64,7 @@ namespace HR.LeaveManagement.Application.Feature.LeaveRequest.Commands.CreateLea
             {
                 var email = new EmailMessage
                 {
-                    To = string.Empty,
+                    To = string.Empty, 
                     Body = $"Your leave request for {request.StartDate:D} to {request.EndDate:D} " +
                         $"has been submitted successfully.",
                     Subject = "Leave Request Submitted"

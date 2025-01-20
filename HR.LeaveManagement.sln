@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Infrastr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Api", "HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj", "{305BA93A-52FA-47D6-BB69-A4A4EE785D01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Identity", "HR.LeaveManagement.Identity\HR.LeaveManagement.Identity.csproj", "{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{305BA93A-52FA-47D6-BB69-A4A4EE785D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{305BA93A-52FA-47D6-BB69-A4A4EE785D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{305BA93A-52FA-47D6-BB69-A4A4EE785D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +71,6 @@ Global
 		{6CF89A17-0E07-4D4B-9F50-453F98803097} = {E4985F29-8799-48A5-987C-7CBD6DB6F35F}
 		{E73BC2C4-C478-4A86-9BEA-DC250D650637} = {E4985F29-8799-48A5-987C-7CBD6DB6F35F}
 		{305BA93A-52FA-47D6-BB69-A4A4EE785D01} = {38FFFA7D-752F-4385-B40B-FF89385B8957}
+		{E2E3A86D-C350-43B4-8AE0-23D22CAF2F29} = {E4985F29-8799-48A5-987C-7CBD6DB6F35F}
 	EndGlobalSection
 EndGlobal
