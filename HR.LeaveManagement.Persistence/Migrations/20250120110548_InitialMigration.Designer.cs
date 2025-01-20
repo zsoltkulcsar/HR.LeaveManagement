@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HR.LeaveManagement.Persistence.Migrations
 {
-    [DbContext(typeof(HrDatabaseContext))]
-    [Migration("20230109134349_InitialMigration")]
+    [DbContext(typeof(HRDatabaseContext))]
+    [Migration("20250120110548_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace HR.LeaveManagement.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -135,8 +135,8 @@ namespace HR.LeaveManagement.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 1, 9, 8, 43, 48, 939, DateTimeKind.Local).AddTicks(3849),
-                            DateModified = new DateTime(2023, 1, 9, 8, 43, 48, 939, DateTimeKind.Local).AddTicks(3862),
+                            DateCreated = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateModified = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DefaultDays = 10,
                             Name = "Vacation"
                         });
