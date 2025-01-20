@@ -6,7 +6,7 @@ namespace HR.LeaveManagement.Application.UnitTests.Mocks
 {
     public class MockLeaveTypeRepository
     {
-        public static Mock<ILeaveTypeRepository> GetLeaveTypeMockLeaveTypeRepository()
+        public static Mock<ILeaveTypeRepository> GetMockLeaveTypeRepository()
         {
 
             var leaveTypes = new List<LeaveType>
@@ -39,7 +39,8 @@ namespace HR.LeaveManagement.Application.UnitTests.Mocks
                     leaveTypes.Add(leaveType); 
                     return Task.CompletedTask; 
                 });
-                
+
+            return mockRepo;     
         }
-}
+    }
 }
